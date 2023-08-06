@@ -26,7 +26,7 @@ const TodoListHeader = ({
               {language === "US" ? (
                 <p>{`You have ${taskLeft} tasks left!`}</p>
               ) : (
-                <p>{`Bạn có ${taskLeft} chưa làm`}</p>
+                <p>{`Bạn có ${taskLeft} việc chưa làm`}</p>
               )}
             </>
           )}
