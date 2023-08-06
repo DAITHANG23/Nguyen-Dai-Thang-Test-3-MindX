@@ -1,0 +1,13 @@
+.languague-picker {
+  margin: auto 8px;
+  cursor: pointer;
+  opacity: 0.2;
+}
+
+.languague-picker:hover {
+  opacity: 1;
+}
+
+.languague-picker.selected {
+  opacity: 1;
+}
