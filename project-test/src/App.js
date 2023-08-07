@@ -54,6 +54,13 @@ const Home = () => {
       setIsChecked(true);
     } else setIsChecked(false);
   };
+
+  const onRemoveToDo = (id) => {
+    const todoRemove = todoList.filter((todoItem) => {
+      return todoItem.id !== id;
+    });
+    setTodoList(todoRemove);
+  };
   return (
     <div className="App">
       <div className="container">
@@ -67,6 +74,7 @@ const Home = () => {
           isChecked={isChecked}
           todoList={todoList}
           isCheckTodoList={isCheckTodoList}
+          onRemoveToDo={onRemoveToDo}
         />
         <Form language={language} onAddTodo={onAddTodo} />
       </div>

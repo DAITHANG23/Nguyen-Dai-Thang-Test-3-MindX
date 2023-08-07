@@ -2,7 +2,10 @@
   padding: 10px;
   flex: 1;
   height: 0px;
+  overflow-y: auto;
+  max-height: 360px;
 }
+
 .todo-item-container {
   border-bottom: 1px solid #ececec;
   padding: 10px;
@@ -10,11 +13,21 @@
   font-weight: 100;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .todo-item-container.done {
   color: #9a9a9a;
   text-decoration: line-through;
+}
+.todo-item-container button {
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  font-size: 16px;
 }
 
 .item-title {

@@ -1,6 +1,6 @@
 import "./TodoList.css";
 
-const TodoList = ({ todoList, isCheckTodoList, isChecked }) => {
+const TodoList = ({ todoList, isCheckTodoList, isChecked, onRemoveToDo }) => {
   const todoListNotActive = todoList.filter((todoItem) => {
     return todoItem.isCheck !== true;
   });
@@ -13,12 +13,12 @@ const TodoList = ({ todoList, isCheckTodoList, isChecked }) => {
         key={id}
       >
         <input
-          style={{ borderRadius: "1000px" }}
           type="checkbox"
           checked={isCheck}
           onChange={() => isCheckTodoList(id)}
         />
         <div className="item-title">{title}</div>
+        <button onClick={() => onRemoveToDo(id)}>x</button>
       </div>
     );
   });
@@ -35,12 +35,12 @@ const TodoList = ({ todoList, isCheckTodoList, isChecked }) => {
           key={id}
         >
           <input
-            style={{ borderRadius: "1000px" }}
             type="checkbox"
             checked={isCheck}
             onChange={() => isCheckTodoList(id)}
           />
           <div className="item-title">{title}</div>
+          <button onClick={() => onRemoveToDo(id)}>x</button>
         </div>
       );
     });

@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import "./Footer.css";
 
 const Footer = ({ setLanguage }) => {
-  const [la, setIsLa] = useState();
+  const [la, setIsLa] = useState("US");
   return (
     <div>
       <h3>Made by MindX 🔥</h3>
       <div>
-        {la === "US" ? <span>Available on:</span> : <span>Tiện ích:</span>}
+        {la === "VN" ? <span>Tiện ích:</span> : <span>Available on:</span>}
 
         <span
           onClick={() => {
